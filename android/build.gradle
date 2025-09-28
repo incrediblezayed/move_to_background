@@ -28,10 +28,11 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 35
-
     namespace "com.sayegh.move_to_background"
-        compileSdk 34
+    compileSdkVersion 35
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
@@ -44,9 +45,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
     }
     
-    kotlinOptions {
-        jvmTarget = '1.8'
-    }
+    
     lintOptions {
         disable 'InvalidPackage'
     }
