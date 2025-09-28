@@ -28,6 +28,16 @@ android {
     compileSdkVersion 28
 
     defaultConfig {
+        namespace "com.sayegh.move_to_background"
+        compileSdkVersion 35
+
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_11
+            targetCompatibility JavaVersion.VERSION_11
+        }
+        kotlinOptions {
+            jvmTarget = '11'
+        }
         minSdkVersion 16
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
